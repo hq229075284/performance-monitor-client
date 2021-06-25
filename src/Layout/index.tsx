@@ -1,10 +1,10 @@
 import React from 'react';
-import './App.css';
+import {connect} from 'react-redux';
 import {Layout} from 'antd';
 const {Header, Footer, Sider, Content} = Layout;
-function App() {
-  return (
-    <div className="App">
+class Layouts extends React.Component {
+  render() {
+    return (
       <Layout>
         <Sider>Sider</Sider>
         <Layout>
@@ -13,8 +13,8 @@ function App() {
           <Footer>Footer</Footer>
         </Layout>
       </Layout>
-    </div>
-  );
+    );
+  }
+  
 }
-
-export default App;
+export default connect()(Layouts);
