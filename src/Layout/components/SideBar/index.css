@@ -1,0 +1,40 @@
+.sidebar-logo-container{
+  position: relative;
+  width: 100%;
+  padding-top: 34px;
+  text-align: center;
+  overflow: hidden;
+}
+.sidebar-title {
+  /* display: inline-block; */
+  margin: 0;
+  color: #fff;
+  font-weight: 600;
+  line-height: 50px;
+  font-size: 14px;
+  font-family: Avenir, Helvetica Neue, Arial, Helvetica, sans-serif;
+  vertical-align: middle;
+}
+.title{
+  line-height: 32px;
+  font-size: 34px;
+  color:#fff;
+}
+.sub-title{
+  line-height: 32px;
+  font-size: 34px;
+  color:#fff;
+  font-size: 16px;
+  line-height: 1;
+  font-family: MicrosoftYaHei;
+  color: #9ad0da;
+  margin-top: 18px;
+}
+  /* &::after{
+    content:'';
+    display: block;
+    width: 128px;
+    height: 1px;
+    background-color: #7bc1cd;
+    margin:20px auto 26px;
+  } */

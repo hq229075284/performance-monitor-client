@@ -1,20 +1,23 @@
+import './index.css';
 import React from 'react';
-import {connect} from 'react-redux';
+import {SideBar} from './components/SideBar';
+// import {connect} from 'react-redux';
+
 import {Layout} from 'antd';
-const {Header, Footer, Sider, Content} = Layout;
+const {Sider, Content} = Layout;
 class Layouts extends React.Component {
   render() {
     return (
-      <Layout>
-        <Sider>Sider</Sider>
-        <Layout>
-          <Header>Header</Header>
+      <Layout className='dc-app-layout'>
+        <Sider className='dc-sidebar-container'>
+          <SideBar></SideBar>
+        </Sider>
+        <Layout  className='dc-main-container' >
           <Content>Content</Content>
-          <Footer>Footer</Footer>
         </Layout>
       </Layout>
     );
   }
   
 }
-export default connect()(Layouts);
+export default Layouts;

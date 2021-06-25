@@ -1,0 +1,16 @@
+.dc-app-layout{
+  height: 100vh;
+}
+.dc-sidebar-container{
+  overflow: auto;
+  height: 100vh;
+  position: fixed;
+  background-color: #006ed4 !important;
+  left: 0
+}
+.dc-main-container{
+  padding: 20px;
+}
+.ant-layout-content{
+  background-color: #fff;
+}
