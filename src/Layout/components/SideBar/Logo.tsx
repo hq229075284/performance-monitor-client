@@ -1,5 +1,5 @@
 import './index.css';
-import {settings} from '@/settings';
+import {settings} from 'src/settings';
 export const Logo = () => {
   const title = settings.title; 
   const subtitle = settings.subtitle;
