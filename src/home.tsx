@@ -14,7 +14,6 @@ import React from 'react';
 // }
 
 type IProps = React.PropsWithChildren<UsedReduxState & {dispatch: Dispatch}>;
-
 class home extends React.Component<IProps>{
   render(){
     return <div>
