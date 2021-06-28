@@ -1,6 +1,5 @@
 import {connect} from 'react-redux';
 import type {Dispatch} from 'redux';
-import type {ReactNode} from 'react';
 import React from 'react';
 
 // function home (props: UsedReduxState & {readonly dispatch: Dispatch}): JSX.Element{
@@ -13,8 +12,9 @@ import React from 'react';
 //     >click</button>
 //   </div>;
 // }
+type IProps = React.PropsWithChildren<UsedReduxState & {dispatch: Dispatch}>;
 
-class home extends React.Component<UsedReduxState & {children: ReactNode} & {readonly dispatch: Dispatch}>{
+class home extends React.Component<IProps>{
   render(){
     return <div>
       {this.props.todo}

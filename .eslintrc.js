@@ -17,6 +17,7 @@ module.exports={
             "@typescript-eslint/no-floating-promises":['off'],
             "@typescript-eslint/prefer-readonly-parameter-types":['off'],
             "@typescript-eslint/quotes":['error','single'],
+            "@typescript-eslint/no-type-alias":['off'],
             '@typescript-eslint/indent': [
                 'error',
                 2,
