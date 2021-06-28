@@ -1,5 +1,6 @@
 import {connect} from 'react-redux';
 import type {Dispatch} from 'redux';
+import type {ReactNode} from 'react';
 import React from 'react';
 
 // function home (props: UsedReduxState & {readonly dispatch: Dispatch}): JSX.Element{
@@ -13,7 +14,7 @@ import React from 'react';
 //   </div>;
 // }
 
-class home extends React.Component<UsedReduxState & {readonly dispatch: Dispatch}>{
+class home extends React.Component<UsedReduxState & {children: ReactNode} & {readonly dispatch: Dispatch}>{
   render(){
     return <div>
       {this.props.todo}
