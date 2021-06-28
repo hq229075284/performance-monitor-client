@@ -12,6 +12,7 @@ import React from 'react';
 //     >click</button>
 //   </div>;
 // }
+
 type IProps = React.PropsWithChildren<UsedReduxState & {dispatch: Dispatch}>;
 
 class home extends React.Component<IProps>{
