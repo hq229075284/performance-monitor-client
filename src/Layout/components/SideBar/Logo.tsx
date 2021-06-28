@@ -1,4 +1,4 @@
-import './index.css';
+import './index.scss';
 import {settings} from 'src/settings';
 export const Logo = () => {
   const title = settings.title; 

@@ -1,0 +1,114 @@
+.sidebar-logo-container{
+  position: relative;
+  width: 100%;
+  padding-top: 34px;
+  text-align: center;
+  overflow: hidden;
+}
+.sidebar-title {
+  /* display: inline-block; */
+  margin: 0;
+  color: #fff;
+  font-weight: 600;
+  line-height: 50px;
+  font-size: 14px;
+  font-family: Avenir, Helvetica Neue, Arial, Helvetica, sans-serif;
+  vertical-align: middle;
+}
+.title{
+  line-height: 30px;
+  font-size: 30px;
+  color:#fff;
+}
+.sub-title{
+  line-height: 32px;
+  font-size: 32px;
+  color:#fff;
+  font-size: 16px;
+  line-height: 1;
+  font-family: MicrosoftYaHei;
+  color: #9ad0da;
+  margin-top: 18px;
+}
+.avatar{
+  text-align: center;
+  color:#fff;
+  padding-top: 14px;
+  margin-bottom: 50px;
+  .name{
+    font-family: MicrosoftYaHei;
+    font-size: 16px;
+  }
+  .img-container{
+    margin: 14px 0;
+  }
+  .options{
+    font-family: MicrosoftYaHei;
+    font-size: 14px;
+    color: #a2ceff;
+    cursor: pointer;
+  }
+}
+// 	/* 设置滚动条的样式 */
+//   ::-webkit-scrollbar {
+//     width: 10px;
+// 	}
+// 	/* 滚动槽 */
+// 	 ::-webkit-scrollbar-track {
+// 		box-shadow: inset006pxrgba(0, 0, 0, 0.3);
+// 		border-radius: 10px;
+// 	}
+// 	/* 滚动条滑块 */
+// 	 ::-webkit-scrollbar-thumb {
+// 		border-radius: 10px;
+// 		background: rgba(69, 26, 187, 0.4);
+// 		box-shadow: inset006pxrgba(0, 0, 0, 0.5);
+// 	}
+.scrollbar-wrapper{
+  height: calc(100vh - 106px - 210px);
+  overflow: auto;
+  &::-webkit-scrollbar {
+    width: 0px;
+	}
+  &::-webkit-scrollbar-thumb {
+    background: rgba(255, 0, 0, 0.4);
+  }
+}
+.ant-menu{
+  
+  color: #fff !important;
+  background-color: #006ed4 !important;
+}
+.ant-menu-inline{
+  border-right: 0px !important;
+}
+.ant-menu-inline .ant-menu-item, .ant-menu-inline .ant-menu-submenu-title{
+  width: calc(100%) !important;
+}
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected{
+  color: #f4f4f5 !important;
+  background-color: rgba(16, 156, 241, 0.7) !important;
+}
+.ant-menu-submenu-active{
+  color: #f4f4f5 !important;
+  background-color: rgba(16, 156, 241, 0.7)
+}
+.ant-menu-submenu-selected{
+  color: #fff !important;
+  background-color: rgba(16, 156, 241, 0.7)
+}
+.ant-menu-inline .ant-menu-item{
+  &::after{
+    border-right: 0px !important;
+  }
+}
+.ant-menu-inline .ant-menu-submenu-title:hover, .ant-menu-light:hover .ant-menu-item:hover{
+  color: #fff !important;
+  background-color: rgba(16, 156, 241, 0.7)
+}
+.ant-menu-submenu:hover > .ant-menu-submenu-title > .ant-menu-submenu-arrow{
+  color: #fff !important;
+}
+.ant-menu-submenu-arrow{
+  color: #fff !important;
+}
