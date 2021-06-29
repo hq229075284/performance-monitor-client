@@ -1,4 +1,3 @@
-import './index.scss';
 import React from 'react';
 import {Menu} from 'antd';
 import {AppstoreOutlined, MailOutlined, SettingOutlined} from '@ant-design/icons';
@@ -13,7 +12,6 @@ class Menus extends React.Component {
     return (
       <Menu
         onClick={this.handleClick}
-        style={{width: 200}}
         defaultSelectedKeys={['1']}
         defaultOpenKeys={['sub1']}
         mode="inline"
@@ -37,6 +35,7 @@ class Menus extends React.Component {
           <Menu.Item key="11">Option 11</Menu.Item>
           <Menu.Item key="12">Option 12</Menu.Item>
         </SubMenu>
+        <Menu.Item key="13">Option 13</Menu.Item>
       </Menu>
     );
   }

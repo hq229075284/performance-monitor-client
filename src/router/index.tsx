@@ -4,6 +4,7 @@ const staticRotuers = ()=><HashRouter>
   {/* https://reactrouter.com/web/api/Route/component */}
   {/* 优先级 children > component > render */}
   <Switch>
+    {/* https://reactrouter.com/web/api/Redirect/exact-bool */}
     <Redirect  from="/" to="/home" exact />
     <Route path="/home" component={Home} />
   </Switch>

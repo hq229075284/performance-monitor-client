@@ -5,7 +5,7 @@ import Router from './router';
 import {Provider} from 'react-redux';
 import {store} from './store';
 import Layouts from './Layout';
-import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
+// import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>

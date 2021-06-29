@@ -1,4 +1,4 @@
-'use strict';
+
 
 const fs = require('fs');
 const path = require('path');
@@ -26,6 +26,7 @@ const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
 const ForkTsCheckerWebpackPlugin = require('react-dev-utils/ForkTsCheckerWebpackPlugin');
 const typescriptFormatter = require('react-dev-utils/typescriptFormatter');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+const { getThemeVariables }=require('antd/dist/theme')
 
 const postcssNormalize = require('postcss-normalize');
 
@@ -63,6 +64,7 @@ const cssRegex = /\.css$/;
 const cssModuleRegex = /\.module\.css$/;
 const sassRegex = /\.(scss|sass)$/;
 const sassModuleRegex = /\.module\.(scss|sass)$/;
+const lessRegex = /\.less$/;
 
 const hasJsxRuntime = (() => {
   if (process.env.DISABLE_NEW_JSX_TRANSFORM === 'true') {
@@ -409,6 +411,7 @@ module.exports = function (webpackEnv) {
                 ],
                 
                 plugins: [
+                  ['babel-plugin-import', { "libraryName": "antd", "libraryDirectory":"es", style: true }],
                   [
                     require.resolve('babel-plugin-named-asset-import'),
                     {
@@ -533,6 +536,40 @@ module.exports = function (webpackEnv) {
                 },
                 'sass-loader'
               ),
+            },
+            {
+              test: lessRegex,
+              use: (()=>{
+                const loaders=getStyleLoaders(
+                  {
+                    importLoaders: 3,
+                    sourceMap: isEnvProduction
+                      ? shouldUseSourceMap
+                      : isEnvDevelopment,
+                  },
+                  'less-loader'
+                )
+                loaders[loaders.length-1].options={
+                  ...loaders[loaders.length-1].options,
+                  lessOptions:{
+                    modifyVars: {
+                      ...getThemeVariables({
+                        compact: true, // 开启紧凑模式
+                      }),
+                      'layout-header-background': '#023E8A',
+                      // 'menu-dark-highlight-color': '#0077B6',
+                      'menu-highlight-color': '#fff',// 高亮（选中）文字的颜色
+                      'menu-item-color': '#fff',// ^箭头颜色
+                      'menu-item-active-bg':'#0077B6',// 高亮菜单背景色
+                      "menu-inline-toplevel-item-height":'40px', // 菜单高度
+                      "menu-item-height":'40px', // 菜单高度
+                      "menu-icon-size":'16px' // 菜单图标大小
+                    },
+                    javascriptEnabled: true,
+                  }
+                }
+                return loaders
+              })(),
             },
             // "file" loader makes sure those assets get served by WebpackDevServer.
             // When you `import` an asset, you get its (virtual) filename.

@@ -4,13 +4,14 @@
 .dc-sidebar-container{
   overflow: auto;
   height: 100vh;
-  position: fixed;
-  background-color: #006ed4 !important;
+  // background-color: #03045E !important;
   left: 0
 }
 .dc-main-container{
   padding: 20px;
+  overflow-x: hidden;
 }
 .ant-layout-content{
   background-color: #fff;
+  flex:1 0 auto;
 }

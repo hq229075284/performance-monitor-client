@@ -1,4 +1,3 @@
-import './index.scss';
 import {Avatar, Divider} from 'antd';
 import {AntDesignOutlined} from '@ant-design/icons';
 export const Avatars = () => {
