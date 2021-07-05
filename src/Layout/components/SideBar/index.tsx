@@ -1,11 +1,16 @@
 import {Logo} from './Logo';
 import {Avatars} from './Avatar';
-import Menus from './Menu';
+import Menu from './Menu';
+import type {FC} from 'react';
 import './index.scss';
-export const SideBar = () => {
-  return <>
-    <Logo></Logo>
-    <Menus></Menus>
-    <Avatars></Avatars>
-  </>;
+// export const SideBar = () => {
+const SideBar: FC = (props) => {
+  return (
+    <>
+      <Logo></Logo>
+      <Menu></Menu>
+      <Avatars></Avatars>
+    </>
+  ); 
 };
+export default SideBar;

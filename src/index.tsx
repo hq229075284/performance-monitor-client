@@ -4,14 +4,15 @@ import Router from './router';
 // import reportWebVitals from './reportWebVitals';
 import {Provider} from 'react-redux';
 import {store} from './store';
-import Layouts from './Layout';
+// import Layout from 'src/Layout';
+
 // import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <Layouts>
-        <Router />
-      </Layouts>
+      {/* <Layout> */}
+      <Router></Router>
+      {/* </Layout> */}
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
